@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="projekti1tyyli.css">
+</head>
+<body>
+    
+    <form>
+        <h2>Tietojenkeruulomake</h2>
+        <label for="enimi">Etunimi</label><br />
+        <input type="text" id="enimi" name="enimi" value="John" /><br
+
+        <label for="snimi">Sukunimi</label><br />
+        <input type="text" id="snimi" name="snimi" value="Deere" /><br />
+
+        <label for="sposti">Sähköposti</label><br />
+        <input type="email" id="sposti" name="sposti" value="john.deere@gmail.com"<br />
+
+        <p>Valitse näistä toinen</p>
+        <input type="radio" id="haluan" name="spostivalinta" value="Haluan_saada" />
+        <label for="haluan">Haluan saada sähköpostia</label><br />
+
+        <input type="radio" id="enhalua" name="spostivalinta" value="enhalua_saada" />
+        <label for="enhalua">En halua saada sähköpostia</label> <br /><br />
+
+        <label for="palaute">Palautteesi kotisivustani</label><br />
+        <textarea name="palaute" rows="8" cols="50"></textarea>
+
+        <p>Mistä pidät koulusta eniten?</p>
+        <input type="checkbox" id="ruoka" name="valinta1" value="Ruoka">
+        <label for="ruoka"> Ruoasta</label><br>
+
+        <input type="checkbox" id="ammattiaineet" name="valinta2" value="Ammattiaine">
+        <label for="ammattiaineet"> Ammattiaineista</label><br>
+
+        <input type="checkbox" id="yto" name="valinta3" value="Yto">
+        <label for="yto"> YTO-aineista</label><br>
+
+        <input type="checkbox" id="vapaa-aika" name="valinta4" value="Vapaa-aika">
+        <label for="vapaa-aika"> Vapaa-ajasta</label><br><br />
+
+        <input type="submit" value="Tarkista lomake" /> <input type="submit" value="Tyhjennä lomake" />
+    </form>
+
+</body>
+</html>
