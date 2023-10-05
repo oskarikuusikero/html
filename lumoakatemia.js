@@ -63,9 +63,68 @@ function metriYard(metri){
     return metri;
 }
 
-function asciiArvo(){
-   let kirjain = .charCodeAt();
+/*function asciiArvo(kirjain){
+    kirjain = kirjain.charCodeAt(0);
+    return kirjain; ????
+    
+}*/
+
+function ympyränAla(säde){
+     säde = 2 * 3.14 * säde;
+     return säde;
+}
+
+function neliönAla(sivu){
+    sivu = sivu * sivu;
+    return sivu;
+}
+
+function suorakulmanAla(leveys, pituus){
+    let ala = leveys * pituus;
+    return ala;
+}
+
+/* function päiväMuuntaja(päivät){
+    let vuodet = päivät / 365;
+    
+    return vuodet;
+}*/
+
+function suurempiLuku(a, b){
+    if (a > b) {
+return a;
+    } else if (a < b){
+        return b;
+    } else return (console.log("yhtäsuuri"));
     
 }
 
+function suurinLuku(a, b, c){
+    if (a >= b && a >= c){
+        return a;
+    } else if (b >= a && b >= c){
+        return b;
+    } else return c;
+}
 
+function posVaiNega(luku){
+   if (luku > 0){
+      console.log("Positiivinen");
+   } else if (luku < 0){
+      console.log("Negatiivinen");
+   } else if (luku == 0){
+      console.log("Nolla!")
+   }
+}
+
+function lukuTarkistus(num){
+    if (num / 5 == 1 | num / 11 == 1){
+        console.log("On jaollinen!");
+    } else console.log("Ei jaollinen");
+}
+
+/* function karkausVuosi(vuosi){
+    if (vuosi / 4 == 4 && vuosi / 100 != ){
+        console.log("Karkausvuosi");
+    } else console.log("Normivuosi");
+} */
