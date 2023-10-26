@@ -132,24 +132,29 @@ set vuosi(uusiVuosi){
 }
 
 aja(){
- console.log(this.merkki + "" + "ajaa.")
+ console.log(this.merkki + this.malli + "" + "ajaa.")
 }
 
 kiihdytä(){
-    console.log(this.merkki + "" + "kiihdyttää.")
+    console.log(this.merkki + this.malli + "" + "kiihdyttää.")
 }
 jarruta(){
-    console.log(this.merkki + "" + "jarruttaa.")
+    console.log(this.merkki + this.malli + "" + "jarruttaa.")
 }
 kaynnista(){
-    console.log(this.merkki + "" + "käynnistää.")
+    console.log(this.merkki + this.malli + "" + "käynnistää.")
 }
 sammuta(){
-    console.log(this.merkki + "" + "sammuttaa.")
+    console.log(this.merkki + this.malli + "" + "sammuttaa.")
 }
 
 class Auto extends Ajoneuvo {
+ constructor(merkki, malli, vuosi, pyorat = 4);
+ this.pyorat = pyorat;
+}
 
+class Moottoripyora extends Auto {
+    constructor(merkki, malli, vuosi, pyorat = 2);
 }
 
 class TestiAjo {
@@ -157,4 +162,84 @@ class TestiAjo {
         const mersu = new Auto("MercedesBenz", "E", 2006);
         mersu.aja();
     }
+}
+
+
+
+class Pankkitili {
+    constructor(){
+        this.saldo = 0;
+    }
+talleta(maara){
+    if (maara > 0){
+        this.saldo + maara;
+        console.log("Uusi saldo" + "" + this.saldo);
+    }
+    else {
+        console.log("Virheellinen summa!")
+    }
+}
+
+nosta(maara){
+    if (maara > 0){
+        if (maara <= this.saldo){
+            this.saldo -= maara;
+            console.log("Uusi saldo" + "" + this.saldo);
+        } else{
+            console.log("Määrä ylittää saldon");
+        } else{
+            console.log("Virheellinen määrä!")
+        }
+        
+    }
+}
+}
+
+
+class Elain{
+    constructor(nimi){
+        this.nimi = nimi;
+    }
+}
+
+class Koira extends Elain{
+    aanesta(){
+        console.log("Woof woof!");
+    }
+}
+
+class Kala extends Elain{
+    aanesta(){
+        console.log("Bulp bulp!");
+    }
+}
+
+class Lintu extends Elain{
+    aanesta(){
+        console.log("Kwaak kwaaak!");
+    }
+}
+
+
+
+class Kirja{
+    constructor(nimi, kirjailija){
+        this.nimi = nimi;
+        this.kirjailija = kirjailija;
+    }
+}
+
+class Kirjasto {
+    constructor(){
+        this.kirjat = [];
+    }
+
+    lisaaKirja(kirja){
+        this.kirjat.push(kirja);
+    }
+
+    /*
+    haeKirjat(kirjailija){
+        return this.kirjat.filter(kirja => kirja.kirjailija === kirjailija );
+    }*/
 }
