@@ -128,3 +128,15 @@ function lukuTarkistus(num){
         console.log("Karkausvuosi");
     } else console.log("Normivuosi");
 } */
+
+
+
+//ohjelma joka kysyy käyttäjältä kaksi kokonaislukua ja kertoo ovatko luvut samat vai eri suuret.
+let luku1 = parseInt(prompt("Syötä ensimmäinen kokonaisluku:"));
+let luku2 = parseInt(prompt("Syötä toinen kokonaisluku:"));
+
+if (luku1 === luku2) {
+  console.log("Luvut ovat samat.");
+} else {
+  console.log("Luvut eivät ole samat.");
+}

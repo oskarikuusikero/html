@@ -69,6 +69,15 @@ function kaannaMerkkijono(merkkijono){
      merkkijono = merkkijono.split().reverse();
      return merkkijono;
 }
+// copilot testi
+function reverseString(str) {
+    return str.split("").reverse().join("");
+  }
+
+  let reversed = reverseString("hello world");
+console.log(reversed); // "dlrow olleh"
+
+
 /* 
 function onkoPalindromi(sana){
      if (sana.split('').reverse().join('') === sana){
